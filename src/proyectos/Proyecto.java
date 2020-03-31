@@ -13,7 +13,7 @@ import javax.persistence.Id;
 
 /**
  *
- * @author 
+ * @author: SII
  */
 @Entity
 public class Proyecto implements Serializable {
