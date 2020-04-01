@@ -6,6 +6,7 @@
 package proyectos;
 import java.io.Serializable;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,35 +16,43 @@ import javax.persistence.ManyToOne;
  *
  * @author a_tm1
  */
+@Entity
 public class ArchivoAdjunto implements Serializable {
     private static final long serialVersionUID = 1L;
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column(name = "extension", nullable = false, length = 50)
     private String extension;
+    @Column(name = "nombre", nullable = false, length = 50)
     private String nombre;
+    @Column(name = "fecha_subida", nullable = false, length = 50)
     private String fecha_subida;
+    @Column(name = "comentario", nullable = false, length = 50)
     private String comentario;
     
     @ManyToOne 
     private Proyecto coordinaProyecto;
     
     //Lista de getters
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    
     public Long getId() {
         return id;
     }
-    @Column(name = "extension", nullable = false, length = 50)
+    
     public String getExtension() {
        return extension;
     }
-    @Column(name = "nombre", nullable = false, length = 50)
+    
     public String getNombre() {
         return nombre;
     }
-    @Column(name = "fecha_subida", nullable = false, length = 50)
+    
     public String getFecha_subida() {
         return fecha_subida;
     }  
-    @Column(name = "comentario", nullable = false, length = 50)
+    
     public String getComentario() {
         return comentario;
     }

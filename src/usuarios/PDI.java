@@ -34,7 +34,6 @@ public class PDI extends Usuario implements Serializable {
     
 @ManyToMany
 @JoinTable(name = "jnd_Proyecto_PDI", joinColumns = @JoinColumn(name = "Proyecto_fk"), inverseJoinColumns = @JoinColumn(name = "PDI_fk"))
-@Column(name = "CoordinaProyectoPDI", nullable = true)
     private List<Proyecto> CoordinaProyectoPDI;
     
     public String getAreaDeEstudio() {
