@@ -24,7 +24,7 @@ import proyectos.Actividad;
  * @author Antonio Jiménez Godínez
  */
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
