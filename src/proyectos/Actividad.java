@@ -45,7 +45,6 @@ public class Actividad implements Serializable {
     @ManyToMany(mappedBy = "actividades")
     private List<Usuario> participantes;
 
-    
     public Long getId() {
         return id;
     }
