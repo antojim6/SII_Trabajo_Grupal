@@ -25,10 +25,10 @@ public class Alumno extends Usuario implements Serializable {
     @Column(name = "Carrera", nullable = false, length = 150)
     private String Carrera;
     
-    @Column(name = "Area_de_interes", nullable = false, length = 100)
+    @Column(name = "Area_de_interes", nullable = true, length = 100)
     private String Area_de_interes;
     
-    @Column(name = "Disponibilidad", nullable = false, length = 150)
+    @Column(name = "Disponibilidad", nullable = true, length = 150)
     private String Disponibilidad;
 
     
