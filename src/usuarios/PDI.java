@@ -6,6 +6,7 @@
 package usuarios;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,7 +14,7 @@ import javax.persistence.Id;
 
 /**
  *
- * @author USUARIO
+ * @author Pablo Andrés Domínguez
  */
 @Entity
 public class PDI extends Usuario implements Serializable {
@@ -23,6 +24,7 @@ public class PDI extends Usuario implements Serializable {
     private String Area_de_Estudio;
     private String Departamento;
     
+    @Column(name = "Area_de_Estudio", nullable = false, length = 50)
     public String getAreaDeEstudio() {
         return Area_de_Estudio;
     }
@@ -31,6 +33,7 @@ public class PDI extends Usuario implements Serializable {
         this.Area_de_Estudio = Area_de_Estudio;
     }
 
+    @Column(name = "Departamento", nullable = false, length = 50)
     public String getDepartamento() {
         return Departamento;
     }
