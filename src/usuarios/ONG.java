@@ -6,11 +6,14 @@
 package usuarios;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import proyectos.Proyecto;
 
 /**
  *
@@ -20,20 +23,55 @@ import javax.persistence.Id;
 public class ONG implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    private Long id;
-    private String nombreOng;
-    private String nTelefono;
-    private String direccion;
-    private String correo;
-    private int hashPassword;
-    private String orientacion; //Objetivo de la ONG
-    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    @Column(name = "nombreONG",nullable = false,length = 50)
+    private String nombreOng;
+    @Column(name = "Numero Telefono",nullable = false,length = 9)
+    private String nTelefono;
+    @Column(name = "Direccion",nullable = false,length = 50)
+    private String direccion;
+    @Column(name = "Correo",nullable = false,length = 50)
+    private String correo;
+    @Column(name = "HashPassword",nullable = false,length = 50)
+    private int hashPassword;
+    @Column(name = "Orientacion",nullable = false,length = 50)
+    private String orientacion; //Objetivo de la ONG
+    
+    @OneToMany (mappedBy="ong")
+    private List<Proyecto> proyectos; //1 ONG organiza varios proyectos
+    
+    //Lista de getters
     public Long getId() {
         return id;
     }
+    
+    public String getNombreOng() {
+        return nombreOng;
+    }
+    
+    public String getnTelefono() {
+        return nTelefono;
+    }
+    
+    public String getDireccion() {
+        return direccion;
+    }
+    
+    public String getCorreo() {
+        return correo;
+    }
+    
+    public int getHashPassword() {
+        return hashPassword;
+    }
+    
+    public String getOrientacion() {
+        return orientacion;
+    }
 
+    //Lista de setters
     public void setId(Long id) {
         this.id = id;
     }
@@ -60,36 +98,6 @@ public class ONG implements Serializable {
 
     public void setOrientacion(String orientacion) {
         this.orientacion = orientacion;
-    }
-    
-    @Column(name = "nombreONG",nullable = false,length = 50)
-    public String getNombreOng() {
-        return nombreOng;
-    }
-    
-    @Column(name = "Numero Telefono",nullable = false,length = 9)
-    public String getnTelefono() {
-        return nTelefono;
-    }
-    
-    @Column(name = "Direccion",nullable = false,length = 50)
-    public String getDireccion() {
-        return direccion;
-    }
-    
-    @Column(name = "Correo",nullable = false,length = 50)
-    public String getCorreo() {
-        return correo;
-    }
-    
-    @Column(name = "HashPassword",nullable = false,length = 50)
-    public int getHashPassword() {
-        return hashPassword;
-    }
-    
-    @Column(name = "Orientacion",nullable = false,length = 50)
-    public String getOrientacion() {
-        return orientacion;
     }
     
     @Override
