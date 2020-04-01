@@ -5,7 +5,6 @@
  */
 package proyectos;
 import java.io.Serializable;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -76,5 +75,10 @@ public class ArchivoAdjunto implements Serializable {
             return false;
         }
         return true;
+    }
+    
+     @Override
+    public String toString() {
+        return "Archivo Adjunto[ id=" + id + " ]";
     }
 }
