@@ -24,7 +24,7 @@ public class PDI extends Usuario implements Serializable {
     private String Area_de_Estudio;
     private String Departamento;
     
-    @Column(name = "Area_de_Estudio", nullable = false, length = 50)
+    @Column(name = "Area de Estudio", nullable = false, length = 50)
     public String getAreaDeEstudio() {
         return Area_de_Estudio;
     }
