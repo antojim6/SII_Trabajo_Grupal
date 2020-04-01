@@ -6,7 +6,9 @@
 package proyectos;
 
 import java.io.Serializable;
+import usuarios.Usuario;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -32,6 +34,8 @@ public class Actividad implements Serializable {
     private Date fecha_inicio;
     @Temporal(TemporalType.DATE)
     private Date fecha_finalizacion;
+    
+    private List<Usuario> participantes;
 
     public Long getId() {
         return id;
