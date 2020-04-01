@@ -11,6 +11,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import usuarios.ONG;
 
 /**
  *
@@ -20,21 +22,28 @@ import javax.persistence.Id;
 public class Proyecto implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
+    @Column(name = "id", nullable = false, length = 50)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column(name = "nombre", nullable = false, length = 50)
     private String nombre;
+    @Column(name = "descripcion", nullable = false, length = 50)
     private String descripcion;
+    @Column(name = "localidad", nullable = false, length = 50)
     private String localidad;
     
-    @Column(name = "nombre", nullable = false, length = 50)
+    @ManyToOne
+    private ONG ong; //Varios proyectos son organizados por una ONG
+    
     public String getNombre() {
         return nombre;
     }
-    @Column(name = "descripcion", nullable = false, length = 50)
+   
     public String getDescripcion() {
         return descripcion;
     }
-    @Column(name = "localidad", nullable = false, length = 50)
+    
     public String getLocalidad() {
         return localidad;
     }
@@ -52,9 +61,7 @@ public class Proyecto implements Serializable {
     }
     
     
-    @Column(name = "id", nullable = false, length = 50)
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    
     public Long getId() {
         return id;
     }

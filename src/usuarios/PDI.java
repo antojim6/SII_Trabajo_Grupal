@@ -44,7 +44,7 @@ public class PDI extends Usuario implements Serializable {
 
     @Override
     public String toString() {
-        return "usuarios.PDI[ id=" + id + " ]";
+        return "Personal Docente e Investigador: "+super.getNombre()+" "+super.getApellidos()+" Departamento: " + this.Departamento + " ID: "+this.id;
     }
     
 }

@@ -28,38 +28,11 @@ public class ONG implements Serializable {
     private int hashPassword;
     private String orientacion; //Objetivo de la ONG
     
+    //Lista de getters
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-    
-    public void setNombreOng(String nombreOng) {
-        this.nombreOng = nombreOng;
-    }
-
-    public void setnTelefono(String nTelefono) {
-        this.nTelefono = nTelefono;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    public void setHashPassword(int hashPassword) {
-        this.hashPassword = hashPassword;
-    }
-
-    public void setOrientacion(String orientacion) {
-        this.orientacion = orientacion;
     }
     
     @Column(name = "nombreONG",nullable = false,length = 50)
@@ -90,6 +63,35 @@ public class ONG implements Serializable {
     @Column(name = "Orientacion",nullable = false,length = 50)
     public String getOrientacion() {
         return orientacion;
+    }
+
+    //Lista de setters
+    public void setId(Long id) {
+        this.id = id;
+    }
+    
+    public void setNombreOng(String nombreOng) {
+        this.nombreOng = nombreOng;
+    }
+
+    public void setnTelefono(String nTelefono) {
+        this.nTelefono = nTelefono;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public void setHashPassword(int hashPassword) {
+        this.hashPassword = hashPassword;
+    }
+
+    public void setOrientacion(String orientacion) {
+        this.orientacion = orientacion;
     }
     
     @Override
