@@ -4,6 +4,7 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>proyectos.Proyecto</class>
     <class>usuarios.Usuario</class>
+    <class>proyectos.Actividad</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/Trabajo Grupal"/>
       <property name="javax.persistence.jdbc.user" value="usuario"/>
