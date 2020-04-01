@@ -27,46 +27,49 @@ public class Actividad implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @Id 
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column(name = "nombre", nullable = false, length = 50)
     private String nombre;
+    @Column(name = "descripcion", nullable = false, length = 50)
     private String descripcion;
+    @Column(name = "conocimientos_necesarios", nullable = false, length = 50)
     private String conocimientos_necesarios;
+    @Column(name = "fecha_inicio", nullable = false, length = 50)
     @Temporal(TemporalType.DATE)
     private Date fecha_inicio;
+    @Column(name = "fecha_finalizacion", nullable = true, length = 50)
     @Temporal(TemporalType.DATE)
     private Date fecha_finalizacion;
+    @ManyToMany(mappedBy = "actividades")
     private List<Usuario> participantes;
 
     
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
         return id;
     }
-    @Column(name = "nombre", nullable = false, length = 50)
+    
     public String getNombre() {
         return nombre;
     }
-
-    @Column(name = "descripcion", nullable = false, length = 50)
+  
     public String getDescripcion() {
         return descripcion;
     }
 
-    @Column(name = "conocimientos_necesarios", nullable = false, length = 50)
     public String getConocimientos_necesarios() {
         return conocimientos_necesarios;
     }
 
-    @Column(name = "fecha_inicio", nullable = false, length = 50)
     public Date getFecha_inicio() {
         return fecha_inicio;
     }
-    @Column(name = "fecha_finalizacion", nullable = true, length = 50)
+    
     public Date getFecha_finalizacion() {
         return fecha_finalizacion;
     }
     
-    @ManyToMany(mappedBy = "actividades")
     public List<Usuario> getParticipantes(){
         return participantes;
     }
