@@ -41,7 +41,7 @@ public class PDI extends Usuario implements Serializable {
         return Area_de_Estudio;
     }
 
-    public void setAreaDeEstudio(Long id) {
+    public void setAreaDeEstudio(String Area_de_Estudio) {
         this.Area_de_Estudio = Area_de_Estudio;
     }
 
@@ -49,7 +49,7 @@ public class PDI extends Usuario implements Serializable {
         return Departamento;
     }
 
-    public void setDepartamento(String nombre) {
+    public void setDepartamento(String Departamento) {
         this.Departamento = Departamento;
     }
 
