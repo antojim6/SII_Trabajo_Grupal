@@ -7,6 +7,7 @@ package usuarios;
 
 import java.io.Serializable;
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,6 +18,7 @@ import javax.persistence.Id;
  * @author Pablo Andrés Domínguez
  */
 @Entity
+@DiscriminatorValue("P")
 public class PDI extends Usuario implements Serializable {
 
     private final Long id = super.getId();
