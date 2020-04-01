@@ -11,6 +11,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
@@ -26,7 +28,9 @@ public class Actividad implements Serializable {
     private String nombre;
     private String descripcion;
     private String conocimientos_necesarios;
+    @Temporal(TemporalType.DATE)
     private Date fecha_inicio;
+    @Temporal(TemporalType.DATE)
     private Date fecha_finalizacion;
 
     public Long getId() {

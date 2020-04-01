@@ -6,6 +6,7 @@
 package usuarios;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -52,31 +53,31 @@ public class ONG implements Serializable {
     public void setOrientacion(String orientacion) {
         this.orientacion = orientacion;
     }
-
+    @Column(name = "nombreONG",nullable = false,length = 50)
     public String getNombreOng() {
         return nombreOng;
     }
-
+    @Column(name = "Numero Telefono",nullable = false,length = 9)
     public String getnTelefono() {
         return nTelefono;
     }
-
+    @Column(name = "Direccion",nullable = false,length = 50)
     public String getDireccion() {
         return direccion;
     }
-
+    @Column(name = "Correo",nullable = false,length = 50)
     public String getCorreo() {
         return correo;
     }
-
+    @Column(name = "HashPassword",nullable = false,length = 50)
     public int getHashPassword() {
         return hashPassword;
     }
-
+    @Column(name = "Orientacion",nullable = false,length = 50)
     public String getOrientacion() {
         return orientacion;
     }
-   
+    
     public Long getId() {
         return id;
     }
