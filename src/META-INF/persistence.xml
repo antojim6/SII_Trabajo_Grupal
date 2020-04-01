@@ -5,6 +5,11 @@
     <class>proyectos.Proyecto</class>
     <class>usuarios.PDI</class>
     <class>proyectos.Etiqueta</class>
+    <class>proyectos.Actividad</class>
+    <class>usuarios.Alumno</class>
+    <class>usuarios.ONG</class>
+    <class>usuarios.PAS</class>
+    <class>usuarios.Usuario</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/Trabajo Grupal"/>
       <property name="javax.persistence.jdbc.user" value="usuario"/>
