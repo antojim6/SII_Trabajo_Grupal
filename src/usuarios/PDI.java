@@ -10,6 +10,8 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import proyectos.Proyecto;
@@ -19,7 +21,7 @@ import proyectos.Proyecto;
  * @author Pablo Andrés Domínguez
  */
 @Entity
-@DiscriminatorValue("P")
+@DiscriminatorValue("PDI")
 @Table(name = "PDI")
 public class PDI extends Usuario implements Serializable {
 
@@ -31,15 +33,15 @@ public class PDI extends Usuario implements Serializable {
     private String Departamento;
     
 @ManyToMany
-    //joinColumns = @JoinColumn(name = "PDI_id"), 
-    //inverseJoinColumns = @JoinColumn(name = "proyecto_id"))
+@JoinTable(name = "jnd_Proyecto_PDI", joinColumns = @JoinColumn(name = "Proyecto_fk"), inverseJoinColumns = @JoinColumn(name = "PDI_fk"))
+@Column(name = "CoordinaProyectoPDI", nullable = true)
     private List<Proyecto> CoordinaProyectoPDI;
     
     public String getAreaDeEstudio() {
         return Area_de_Estudio;
     }
 
-    public void setAreaDeEstudio(Long id) {
+    public void setAreaDeEstudio(String Area_de_Estudio) {
         this.Area_de_Estudio = Area_de_Estudio;
     }
 
@@ -47,7 +49,7 @@ public class PDI extends Usuario implements Serializable {
         return Departamento;
     }
 
-    public void setDepartamento(String nombre) {
+    public void setDepartamento(String Departamento) {
         this.Departamento = Departamento;
     }
 
