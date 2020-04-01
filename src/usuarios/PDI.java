@@ -10,6 +10,8 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import proyectos.Proyecto;
@@ -31,8 +33,8 @@ public class PDI extends Usuario implements Serializable {
     private String Departamento;
     
 @ManyToMany
-    //joinColumns = @JoinColumn(name = "PDI_id"), 
-    //inverseJoinColumns = @JoinColumn(name = "proyecto_id"))
+@JoinTable(name = "jnd_Proyecto_PDI", joinColumns = @JoinColumn(name = "Proyecto_fk"), inverseJoinColumns = @JoinColumn(name = "PDI_fk"))
+@Column(name = "CoordinaProyectoPDI", nullable = true)
     private List<Proyecto> CoordinaProyectoPDI;
     
     public String getAreaDeEstudio() {
