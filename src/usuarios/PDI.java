@@ -18,29 +18,25 @@ import javax.persistence.Id;
 @Entity
 public class PDI extends Usuario implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private final Long id = super.getId();
 
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
+    private String Area_de_Estudio;
+    private String Departamento;
+    
+    public String getAreaDeEstudio() {
+        return Area_de_Estudio;
     }
 
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof PDI)) {
-            return false;
-        }
-        PDI other = (PDI) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
+    public void setAreaDeEstudio(Long id) {
+        this.Area_de_Estudio = Area_de_Estudio;
+    }
+
+    public String getDepartamento() {
+        return Departamento;
+    }
+
+    public void setDepartamento(String nombre) {
+        this.Departamento = Departamento;
     }
 
     @Override
