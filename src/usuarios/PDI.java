@@ -23,7 +23,7 @@ import proyectos.Proyecto;
 @DiscriminatorValue("PDI")
 public class PDI extends Usuario implements Serializable {
 
-    @Column(name = "Area de Estudio", nullable = false, length = 50)
+    @Column(name = "Area_de_Estudio", nullable = false, length = 50)
     private String Area_de_Estudio;
     @Column(name = "Departamento", nullable = false, length = 50)
     private String Departamento;
