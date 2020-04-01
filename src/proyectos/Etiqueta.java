@@ -27,6 +27,8 @@ public class Etiqueta implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    @Column(name = "Tag", nullable = false, length = 50)
     private String tag;
     @Column(name = "Categoria", nullable = false, length = 50)
     private String Categoria;
@@ -36,11 +38,19 @@ public class Etiqueta implements Serializable {
 @Column(name = "CoordinaProyectoEtiqueta", nullable = true)
     private List<Proyecto> CoordinaProyectoEtiquetas;
 
-    public String getId() {
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+    
+    public String getTag() {
         return tag;
     }
 
-    public void setId(String tag) {
+    public void setTag(String tag) {
         this.tag = tag;
     }
     
