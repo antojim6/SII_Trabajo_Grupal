@@ -14,7 +14,7 @@ import javax.persistence.Id;
 
 /**
  *
- * @author USUARIO
+ * @author Pablo Andrés Domínguez
  */
 @Entity
 public class Etiqueta implements Serializable {
@@ -57,7 +57,7 @@ public class Etiqueta implements Serializable {
 
     @Override
     public String toString() {
-        return "proyectos.Etiqueta[ Tag=" + tag + " ]";
+        return "Etiqueta[ Tag=" + tag + " ]";
     }
     
 }

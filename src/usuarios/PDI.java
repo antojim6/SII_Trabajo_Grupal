@@ -21,7 +21,7 @@ import proyectos.Proyecto;
  * @author Pablo Andrés Domínguez
  */
 @Entity
-@DiscriminatorValue("P")
+@DiscriminatorValue("PDI")
 @Table(name = "PDI")
 public class PDI extends Usuario implements Serializable {
 
