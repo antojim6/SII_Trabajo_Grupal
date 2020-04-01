@@ -7,7 +7,7 @@ package usuarios;
 
 /**
  *
- * @author Antonio Jiménez
+ * @author 
  */
 public interface usuario {
 
