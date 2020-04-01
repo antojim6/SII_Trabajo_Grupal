@@ -42,6 +42,8 @@ public class Proyecto implements Serializable {
     private ONG ong; //Varios proyectos son organizados por una ONG
     @ManyToMany (mappedBy = "CoordinaProyectoPDI")
     private List<PDI> coordinatedByPDI;
+    @OneToMany (mappedBy = "coordinaProyecto")
+    private List<ArchivoAdjunto> contieneArchivos;
     @ManyToMany (mappedBy = "CoordinaProyectoPAS")
     private List<PAS> coordinatedByPAS;
     @OneToMany (mappedBy="proyecto")
