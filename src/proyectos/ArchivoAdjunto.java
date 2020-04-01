@@ -5,6 +5,7 @@
  */
 package proyectos;
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -24,23 +25,29 @@ public class ArchivoAdjunto implements Serializable {
     private String comentario;
           
     
-    
+    //Lista de getters
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
         return id;
     }
+    @Column(name = "extension", nullable = false, length = 50)
     public String getExtension() {
        return extension;
     }
+    @Column(name = "nombre", nullable = false, length = 50)
     public String getNombre() {
         return nombre;
     }
+    @Column(name = "fecha_subida", nullable = false, length = 50)
     public String getFecha_subida() {
         return fecha_subida;
     }  
+    @Column(name = "comentario", nullable = false, length = 50)
     public String getComentario() {
         return comentario;
     }
     
+    //Lista de setters
     public void setId(Long id){
         this.id = id;
     }
@@ -57,7 +64,7 @@ public class ArchivoAdjunto implements Serializable {
         this.comentario = comentario;
     }
     
-        @Override
+    @Override
     public int hashCode() {
         int hash = 0;
         hash += (id != null ? id.hashCode() : 0);
@@ -77,7 +84,7 @@ public class ArchivoAdjunto implements Serializable {
         return true;
     }
     
-     @Override
+    @Override
     public String toString() {
         return "Archivo Adjunto[ id=" + id + " ]";
     }
