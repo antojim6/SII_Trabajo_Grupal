@@ -6,12 +6,16 @@
 package proyectos;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 
 /**
  *
@@ -26,6 +30,11 @@ public class Etiqueta implements Serializable {
     private String tag;
     @Column(name = "Categoria", nullable = false, length = 50)
     private String Categoria;
+    
+    @ManyToMany
+@JoinTable(name = "jnd_Proyecto_Etiqueta", joinColumns = @JoinColumn(name = "Proyecto_fk"), inverseJoinColumns = @JoinColumn(name = "Etiqueta_fk"))
+@Column(name = "CoordinaProyectoEtiqueta", nullable = true)
+    private List<Proyecto> CoordinaProyectoEtiquetas;
 
     public String getId() {
         return tag;
