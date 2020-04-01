@@ -3,18 +3,5 @@
     <datasource>
         <connection value="jdbc:derby://localhost:1527/Trabajo_Grupal"/>
     </datasource>
-    <table tableId="PAS" x="208" y="994"/>
-    <table tableId="ARCHIVOADJUNTO" x="1061" y="699"/>
-    <table tableId="JND_USUARIO_ACTIVIDAD" x="422" y="924"/>
-    <table tableId="JND_PROYECTO_PAS" x="403" y="512"/>
-    <table tableId="ALUMNO" x="49" y="365"/>
-    <table tableId="ONG" x="649" y="319"/>
-    <table tableId="JND_PROYECTO_ETIQUETA" x="1025" y="446"/>
-    <table tableId="PDI" x="10" y="887"/>
-    <table tableId="ACTIVIDAD" x="675" y="913"/>
-    <table tableId="SEQUENCE" x="1602" y="632"/>
-    <table tableId="JND_PROYECTO_PDI" x="406" y="641"/>
-    <table tableId="USUARIO" x="139" y="630"/>
-    <table tableId="PROYECTO" x="682" y="659"/>
-    <table tableId="ETIQUETA" x="1334" y="559"/>
+    <default_layout/>
 </erd>
