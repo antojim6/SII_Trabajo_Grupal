@@ -23,10 +23,11 @@ public class PDI extends Usuario implements Serializable {
 
     private final Long id = super.getId();
 
+    @Column(name = "Area de Estudio", nullable = false, length = 50)
     private String Area_de_Estudio;
+    @Column(name = "Departamento", nullable = false, length = 50)
     private String Departamento;
     
-    @Column(name = "Area de Estudio", nullable = false, length = 50)
     public String getAreaDeEstudio() {
         return Area_de_Estudio;
     }
@@ -35,7 +36,6 @@ public class PDI extends Usuario implements Serializable {
         this.Area_de_Estudio = Area_de_Estudio;
     }
 
-    @Column(name = "Departamento", nullable = false, length = 50)
     public String getDepartamento() {
         return Departamento;
     }
