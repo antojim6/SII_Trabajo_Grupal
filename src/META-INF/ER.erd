@@ -3,5 +3,15 @@
     <datasource>
         <connection value="jdbc:derby://localhost:1527/Trabajo_Grupal"/>
     </datasource>
-    <default_layout/>
+    <table tableId="ARCHIVOADJUNTO" x="1278" y="467"/>
+    <table tableId="JND_USUARIO_ACTIVIDAD" x="58" y="546"/>
+    <table tableId="JND_PROYECTO_PAS" x="530" y="63"/>
+    <table tableId="ONG" x="916" y="13"/>
+    <table tableId="JND_PROYECTO_ETIQUETA" x="1272" y="179"/>
+    <table tableId="ACTIVIDAD" x="812" y="533"/>
+    <table tableId="SEQUENCE" x="417" y="681"/>
+    <table tableId="JND_PROYECTO_PDI" x="530" y="351"/>
+    <table tableId="USUARIO" x="85" y="114"/>
+    <table tableId="PROYECTO" x="915" y="291"/>
+    <table tableId="ETIQUETA" x="1286" y="17"/>
 </erd>

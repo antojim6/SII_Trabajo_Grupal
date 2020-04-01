@@ -8,6 +8,8 @@ package usuarios;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,7 +26,8 @@ import proyectos.Actividad;
  * @author Antonio Jiménez Godínez
  */
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="disc", discriminatorType = DiscriminatorType.STRING)
 public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
