@@ -29,12 +29,19 @@ public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column(name = "nombre", nullable = false, length = 50)
     private String nombre;
+    @Column(name = "apellidos", nullable = false, length = 50)
     private String apellidos;
+    @Column(name = "telefono", nullable = false, length = 50)
     private String telefono;
+    @Column(name = "direccion", nullable = true, length = 50)
     private String Direccion;
+    @Column(name = "correo", nullable = false, length = 50)
     private String correo;
+    @Column(name = "hashPassword", nullable = false, length = 50)
     private String hashPassword;
     private List<Actividad> actividades;
 
@@ -48,7 +55,6 @@ public class Usuario implements Serializable {
         this.actividades = actividades;
     }
     
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
         return id;
     }
@@ -57,7 +63,6 @@ public class Usuario implements Serializable {
         this.id = id;
     }
 
-    @Column(name = "nombre", nullable = false, length = 50)
     public String getNombre() {
         return nombre;
     }
@@ -66,7 +71,6 @@ public class Usuario implements Serializable {
         this.nombre = nombre;
     }
 
-    @Column(name = "apellidos", nullable = false, length = 50)
     public String getApellidos() {
         return apellidos;
     }
@@ -75,7 +79,6 @@ public class Usuario implements Serializable {
         this.apellidos = apellidos;
     }
 
-    @Column(name = "telefono", nullable = false, length = 50)
     public String getTelefono() {
         return telefono;
     }
@@ -84,7 +87,6 @@ public class Usuario implements Serializable {
         this.telefono = telefono;
     }
 
-    @Column(name = "direccion", nullable = true, length = 50)
     public String getDireccion() {
         return Direccion;
     }
@@ -93,7 +95,6 @@ public class Usuario implements Serializable {
         this.Direccion = Direccion;
     }
 
-    @Column(name = "correo", nullable = false, length = 50)
     public String getCorreo() {
         return correo;
     }
@@ -102,7 +103,6 @@ public class Usuario implements Serializable {
         this.correo = correo;
     }
 
-    @Column(name = "hashPassword", nullable = false, length = 50)
     public String getHashPassword() {
         return hashPassword;
     }
