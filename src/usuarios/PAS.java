@@ -23,10 +23,8 @@ import proyectos.Proyecto;
 @DiscriminatorValue("PAS")
 public class PAS extends Usuario implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-
-    @Column(name = "Area_de_Estudio", nullable = false, length = 50)
-    private String Area_de_Estudio;
+    @Column(name = "Profesion", nullable = false, length = 50)
+    private String Profesion;
     @Column(name = "Departamento", nullable = false, length = 50)
     private String departamento;
     @ManyToMany
@@ -34,8 +32,8 @@ public class PAS extends Usuario implements Serializable {
     private List<Proyecto> CoordinaProyectoPAS;
 
     //Lista de getters 
-    public String getAreaEstudio() {
-        return Area_de_Estudio;
+    public String getProfesion() {
+        return Profesion;
     }
 
     public String getDepartamento() {
@@ -43,32 +41,12 @@ public class PAS extends Usuario implements Serializable {
     }
 
     //Lista de setters
-    public void setAreaEstudio(String areaEstudio) {
-        this.Area_de_Estudio = areaEstudio;
+    public void setProfesion(String areaEstudio) {
+        this.Profesion = areaEstudio;
     }
 
     public void setDepartamento(String departamento) {
         this.departamento = departamento;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (super.getId() != null ? super.getId().hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof PAS)) {
-            return false;
-        }
-        PAS other = (PAS) object;
-        if ((super.getId() == null && other.getId() != null) || (super.getId() != null && !super.getId().equals(other.getId()))) {
-            return false;
-        }
-        return true;
     }
     
 }
