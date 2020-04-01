@@ -9,6 +9,7 @@ import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  *
@@ -21,7 +22,9 @@ public class ArchivoAdjunto implements Serializable {
     private String nombre;
     private String fecha_subida;
     private String comentario;
-          
+    
+    @ManyToOne 
+    private Proyecto coordinaProyecto;
     
     //Lista de getters
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
