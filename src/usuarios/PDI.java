@@ -6,10 +6,13 @@
 package usuarios;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import proyectos.Proyecto;
 
 /**
  *
@@ -26,6 +29,11 @@ public class PDI extends Usuario implements Serializable {
     private String Area_de_Estudio;
     @Column(name = "Departamento", nullable = false, length = 50)
     private String Departamento;
+    
+@ManyToMany
+    //joinColumns = @JoinColumn(name = "PDI_id"), 
+    //inverseJoinColumns = @JoinColumn(name = "proyecto_id"))
+    private List<Proyecto> CoordinaProyectoPDI;
     
     public String getAreaDeEstudio() {
         return Area_de_Estudio;
