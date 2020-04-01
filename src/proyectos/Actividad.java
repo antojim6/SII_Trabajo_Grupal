@@ -15,6 +15,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -44,6 +45,8 @@ public class Actividad implements Serializable {
     private Date fecha_finalizacion;
     @ManyToMany(mappedBy = "actividades")
     private List<Usuario> participantes;
+    @ManyToOne
+    private Proyecto proyecto;
 
     public Long getId() {
         return id;
@@ -71,6 +74,10 @@ public class Actividad implements Serializable {
     
     public List<Usuario> getParticipantes(){
         return participantes;
+    }
+    
+    public Proyecto getProyecto(){
+        return proyecto;
     }
     
     public void setId(Long id) {
@@ -101,7 +108,9 @@ public class Actividad implements Serializable {
         this.participantes = participantes;
     }
     
-    
+    public void setProyecto(Proyecto p){
+        this.proyecto = p;
+    }
 
     @Override
     public int hashCode() {
