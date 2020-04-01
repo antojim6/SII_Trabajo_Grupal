@@ -25,8 +25,8 @@ public class PAS extends Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @Column(name = "Area de Estudio", nullable = false, length = 50)
-    private String areaEstudio;
+    @Column(name = "Area_de_Estudio", nullable = false, length = 50)
+    private String Area_de_Estudio;
     @Column(name = "Departamento", nullable = false, length = 50)
     private String departamento;
     @ManyToMany
@@ -35,7 +35,7 @@ public class PAS extends Usuario implements Serializable {
 
     //Lista de getters 
     public String getAreaEstudio() {
-        return areaEstudio;
+        return Area_de_Estudio;
     }
 
     public String getDepartamento() {
@@ -44,7 +44,7 @@ public class PAS extends Usuario implements Serializable {
 
     //Lista de setters
     public void setAreaEstudio(String areaEstudio) {
-        this.areaEstudio = areaEstudio;
+        this.Area_de_Estudio = areaEstudio;
     }
 
     public void setDepartamento(String departamento) {

@@ -26,17 +26,17 @@ public class ONG implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(name = "nombreONG",nullable = false,length = 50)
+    @Column(name = "nombreOng",nullable = false,length = 50)
     private String nombreOng;
-    @Column(name = "Numero Telefono",nullable = false,length = 9)
+    @Column(name = "nTelefono",nullable = false,length = 9)
     private String nTelefono;
-    @Column(name = "Direccion",nullable = false,length = 50)
+    @Column(name = "direccion",nullable = false,length = 50)
     private String direccion;
-    @Column(name = "Correo",nullable = false,length = 50)
+    @Column(name = "correo",nullable = false,length = 50)
     private String correo;
-    @Column(name = "HashPassword",nullable = false,length = 50)
+    @Column(name = "hashPassword",nullable = false,length = 50)
     private int hashPassword;
-    @Column(name = "Orientacion",nullable = false,length = 50)
+    @Column(name = "orientacion",nullable = false,length = 50)
     private String orientacion; //Objetivo de la ONG
     
     @OneToMany (mappedBy="ong")
