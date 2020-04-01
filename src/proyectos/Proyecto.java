@@ -6,6 +6,7 @@
 package proyectos;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,10 +20,41 @@ import javax.persistence.Id;
 public class Proyecto implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    private Long id;
+    private String nombre;
+    private String descripcion;
+    private String localidad;
+    
+    @Column(name = "nombre", nullable = false, length = 50)
+    public String getNombre() {
+        return nombre;
+    }
+    @Column(name = "descripcion", nullable = false, length = 50)
+    public String getDescripcion() {
+        return descripcion;
+    }
+    @Column(name = "localidad", nullable = false, length = 50)
+    public String getLocalidad() {
+        return localidad;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public void setLocalidad(String localidad) {
+        this.localidad = localidad;
+    }
+    
+    
+    @Column(name = "id", nullable = false, length = 50)
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-
     public Long getId() {
         return id;
     }
