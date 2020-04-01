@@ -6,6 +6,7 @@
 package usuarios;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,7 +27,9 @@ public class PAS extends Usuario implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column(name = "Area de Estudio", nullable = false, length = 50)
     private String areaEstudio;
+    @Column(name = "Departamento", nullable = false, length = 50)
     private String departamento;
 
     //Lista de getters
