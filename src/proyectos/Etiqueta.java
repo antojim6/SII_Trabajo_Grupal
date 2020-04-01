@@ -61,6 +61,12 @@ public class Etiqueta implements Serializable {
     public void setCategoria(String Categoria) {
         this.Categoria = Categoria;
     }
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (id != null ? id.hashCode() : 0);
+        return hash;
+    }
 
     @Override
     public boolean equals(Object object) {
@@ -69,23 +75,15 @@ public class Etiqueta implements Serializable {
             return false;
         }
         Etiqueta other = (Etiqueta) object;
-        if ((this.tag == null && other.tag != null) || (this.tag != null && !this.tag.equals(other.tag))) {
+        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
         return true;
     }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 59 * hash + Objects.hashCode(this.tag);
-        hash = 59 * hash + Objects.hashCode(this.Categoria);
-        return hash;
-    }
-
+    
     @Override
     public String toString() {
-        return "Etiqueta[ Tag=" + tag + " ]";
+        return "Etiqueta[ Id=" + id + ", Tag=" + tag + " ]";
     }
     
 }

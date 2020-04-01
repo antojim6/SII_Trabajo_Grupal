@@ -46,6 +46,8 @@ public class Proyecto implements Serializable {
     private List<ArchivoAdjunto> contieneArchivos;
     @ManyToMany (mappedBy = "CoordinaProyectoPAS")
     private List<PAS> coordinatedByPAS;
+    @ManyToMany (mappedBy = "CoordinaProyectoEtiquetas")
+    private List<Etiqueta> coordinatedByEtiqueta;
     @OneToMany (mappedBy="proyecto")
     private List<Actividad> actividades;
     public String getNombre() {
