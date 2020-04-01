@@ -16,6 +16,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import usuarios.ONG;
+import usuarios.PAS;
 import usuarios.PDI;
 
 /**
@@ -41,6 +42,8 @@ public class Proyecto implements Serializable {
     private ONG ong; //Varios proyectos son organizados por una ONG
     @ManyToMany (mappedBy = "CoordinaProyectoPDI")
     private List<PDI> coordinatedByPDI;
+    @ManyToMany (mappedBy = "CoordinaProyectoPAS")
+    private List<PAS> coordinatedByPAS;
     @OneToMany (mappedBy="proyecto")
     private List<Actividad> actividades;
     public String getNombre() {
