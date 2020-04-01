@@ -9,10 +9,12 @@ import java.io.Serializable;
 import usuarios.Usuario;
 import java.util.Date;
 import java.util.List;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -24,8 +26,7 @@ import javax.persistence.TemporalType;
 public class Actividad implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private Long id;
     private String nombre;
     private String descripcion;
@@ -34,31 +35,40 @@ public class Actividad implements Serializable {
     private Date fecha_inicio;
     @Temporal(TemporalType.DATE)
     private Date fecha_finalizacion;
-    
     private List<Usuario> participantes;
 
+    
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
         return id;
     }
-    
+    @Column(name = "nombre", nullable = false, length = 50)
     public String getNombre() {
         return nombre;
     }
 
+    @Column(name = "descripcion", nullable = false, length = 50)
     public String getDescripcion() {
         return descripcion;
     }
 
+    @Column(name = "conocimientos_necesarios", nullable = false, length = 50)
     public String getConocimientos_necesarios() {
         return conocimientos_necesarios;
     }
 
+    @Column(name = "fecha_inicio", nullable = false, length = 50)
     public Date getFecha_inicio() {
         return fecha_inicio;
     }
-
+    @Column(name = "fecha_finalizacion", nullable = true, length = 50)
     public Date getFecha_finalizacion() {
         return fecha_finalizacion;
+    }
+    
+    @ManyToMany(mappedBy = "actividades")
+    public List<Usuario> getParticipantes(){
+        return participantes;
     }
     
     public void setId(Long id) {
@@ -83,6 +93,10 @@ public class Actividad implements Serializable {
 
     public void setFecha_finalizacion(Date fecha_finalizacion) {
         this.fecha_finalizacion = fecha_finalizacion;
+    }
+    
+    public void setParticipantes(List<Usuario> participantes){
+        this.participantes = participantes;
     }
     
     
