@@ -43,7 +43,8 @@ public class Usuario implements Serializable {
     @Column(name = "correo", nullable = false, length = 50)
     private String correo;
     @Column(name = "hashPassword", nullable = false, length = 50)
-    private String hashPassword;    @ManyToMany
+    private String hashPassword;    
+    @ManyToMany
     @JoinTable(name = "jnd_Usuario_Actividad", joinColumns = @JoinColumn(name = "Usuario_fk"), inverseJoinColumns = @JoinColumn(name = "Actividad_fk"))
     private List<Actividad> actividades;
 
