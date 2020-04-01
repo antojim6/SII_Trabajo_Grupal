@@ -11,6 +11,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import usuarios.ONG;
 
 /**
  *
@@ -31,6 +33,8 @@ public class Proyecto implements Serializable {
     @Column(name = "localidad", nullable = false, length = 50)
     private String localidad;
     
+    @ManyToOne
+    private ONG ong; //Varios proyectos son organizados por una ONG
     
     public String getNombre() {
         return nombre;
