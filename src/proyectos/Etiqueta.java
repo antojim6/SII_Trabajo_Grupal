@@ -83,7 +83,7 @@ public class Etiqueta implements Serializable {
     
     @Override
     public String toString() {
-        return "Etiqueta[ Tag=" + tag + " ]";
+        return "Etiqueta[ Id=" + id + ", Tag=" + tag + " ]";
     }
     
 }
