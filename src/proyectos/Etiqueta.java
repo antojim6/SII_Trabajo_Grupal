@@ -6,6 +6,7 @@
 package proyectos;
 
 import java.io.Serializable;
+import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -53,6 +54,14 @@ public class Etiqueta implements Serializable {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 59 * hash + Objects.hashCode(this.tag);
+        hash = 59 * hash + Objects.hashCode(this.Categoria);
+        return hash;
     }
 
     @Override
