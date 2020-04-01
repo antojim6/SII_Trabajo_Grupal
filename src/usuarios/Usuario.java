@@ -29,7 +29,8 @@ public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(name = "nombre", nullable = false, length = 50)
     private String nombre;
@@ -42,11 +43,11 @@ public class Usuario implements Serializable {
     @Column(name = "correo", nullable = false, length = 50)
     private String correo;
     @Column(name = "hashPassword", nullable = false, length = 50)
-    private String hashPassword;
-    private List<Actividad> actividades;
-
+    private String hashPassword;    
     @ManyToMany
     @JoinTable(name = "jnd_Usuario_Actividad", joinColumns = @JoinColumn(name = "Usuario_fk"), inverseJoinColumns = @JoinColumn(name = "Actividad_fk"))
+    private List<Actividad> actividades;
+
     public List<Actividad> getActividades() {
         return actividades;
     }
