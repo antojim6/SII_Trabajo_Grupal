@@ -13,7 +13,6 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.Table;
 import proyectos.Proyecto;
 
 /**
@@ -22,10 +21,7 @@ import proyectos.Proyecto;
  */
 @Entity
 @DiscriminatorValue("PDI")
-@Table(name = "PDI")
 public class PDI extends Usuario implements Serializable {
-
-    private final Long id = super.getId();
 
     @Column(name = "Area de Estudio", nullable = false, length = 50)
     private String Area_de_Estudio;
@@ -34,7 +30,6 @@ public class PDI extends Usuario implements Serializable {
     
 @ManyToMany
 @JoinTable(name = "jnd_Proyecto_PDI", joinColumns = @JoinColumn(name = "Proyecto_fk"), inverseJoinColumns = @JoinColumn(name = "PDI_fk"))
-@Column(name = "CoordinaProyectoPDI", nullable = true)
     private List<Proyecto> CoordinaProyectoPDI;
     
     public String getAreaDeEstudio() {
@@ -55,7 +50,7 @@ public class PDI extends Usuario implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
+        hash += (super.getId() != null ? super.getId().hashCode() : 0);
         return hash;
     }
 
@@ -66,14 +61,14 @@ public class PDI extends Usuario implements Serializable {
             return false;
         }
         PDI other = (PDI) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+        if ((super.getId() == null && other.getId() != null) || (super.getId() != null && !super.getId().equals(other.getId()))) {
             return false;
         }
         return true;
     }
     @Override
     public String toString() {
-        return "Personal Docente e Investigador: "+super.getNombre()+" "+super.getApellidos()+" Departamento: " + this.Departamento + " ID: "+this.id;
+        return "Personal Docente e Investigador: "+super.getNombre()+" "+super.getApellidos()+" Departamento: " + this.Departamento + " ID: "+super.getId();
     }
     
 }

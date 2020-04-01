@@ -10,8 +10,9 @@
     <class>usuarios.ONG</class>
     <class>usuarios.PAS</class>
     <class>usuarios.Usuario</class>
+    <class>proyectos.ArchivoAdjunto</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/Trabajo Grupal"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/Trabajo_Grupal"/>
       <property name="javax.persistence.jdbc.user" value="usuario"/>
       <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
       <property name="javax.persistence.jdbc.password" value="usuario"/>

@@ -7,7 +7,6 @@ package proyectos;
 
 import java.io.Serializable;
 import java.util.List;
-import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -34,8 +33,7 @@ public class Etiqueta implements Serializable {
     private String Categoria;
     
     @ManyToMany
-@JoinTable(name = "jnd_Proyecto_Etiqueta", joinColumns = @JoinColumn(name = "Proyecto_fk"), inverseJoinColumns = @JoinColumn(name = "Etiqueta_fk"))
-@Column(name = "CoordinaProyectoEtiqueta", nullable = true)
+    @JoinTable(name = "jnd_Proyecto_Etiqueta", joinColumns = @JoinColumn(name = "Proyecto_fk"), inverseJoinColumns = @JoinColumn(name = "Etiqueta_fk"))
     private List<Proyecto> CoordinaProyectoEtiquetas;
 
     public Long getId() {
