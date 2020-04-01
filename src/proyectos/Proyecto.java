@@ -6,13 +6,16 @@
 package proyectos;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import usuarios.ONG;
+import usuarios.PDI;
 
 /**
  *
@@ -35,7 +38,8 @@ public class Proyecto implements Serializable {
     
     @ManyToOne
     private ONG ong; //Varios proyectos son organizados por una ONG
-    
+    @ManyToMany (mappedBy = "CoordinaProyectoPDI")
+    private List<PDI> coordinatedByPDI;
     public String getNombre() {
         return nombre;
     }

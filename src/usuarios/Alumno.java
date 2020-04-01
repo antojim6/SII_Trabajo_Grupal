@@ -22,21 +22,24 @@ import javax.persistence.Id;
 @DiscriminatorValue("ALUMNO")
 public class Alumno extends Usuario implements Serializable {
     
+    @Column(name = "Carrera", nullable = false, length = 150)
     private String Carrera;
+    
+    @Column(name = "Area_de_interes", nullable = false, length = 100)
     private String Area_de_interes;
+    
+    @Column(name = "Disponibilidad", nullable = false, length = 150)
     private String Disponibilidad;
 
-    @Column(name = "Carrera", nullable = false, length = 150)
+    
     public String getCarrera(){
         return Carrera;
     }
     
-    @Column(name = "Area_de_interes", nullable = false, length = 100)
     public String getArea_de_interes() {
         return Area_de_interes;
     }
-
-    @Column(name = "Disponibilidad", nullable = false, length = 150)
+    
     public String getDisponibilidad() {
         return Disponibilidad;
     }
