@@ -52,6 +52,25 @@ public class Alumno extends Usuario implements Serializable {
         this.Disponibilidad = Disponibilidad;
     }
     
+        @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (super.getId() != null ? super.getId().hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof PDI)) {
+            return false;
+        }
+        PDI other = (PDI) object;
+        if ((super.getId() == null && other.getId() != null) || (super.getId() != null && !super.getId().equals(other.getId()))) {
+            return false;
+        }
+        return true;
+    }
     
     @Override
     public String toString() {
