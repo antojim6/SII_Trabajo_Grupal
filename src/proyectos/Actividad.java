@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Clase Actividad:
+ * Representa a las actividades dentro de cada proyecto.
+ * Almacena los datos más importantes sobre las mismas.
  */
 package proyectos;
 
@@ -21,7 +21,7 @@ import javax.persistence.TemporalType;
 
 /**
  *
- * @author franciscoperdiguero
+ * @author Francisco Jesús Perdiguero Moreno
  */
 @Entity
 public class Actividad implements Serializable {

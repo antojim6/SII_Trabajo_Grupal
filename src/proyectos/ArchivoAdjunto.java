@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Clase Archivo Adjunto:
+ * Representa a la información adicional adjuntada a cada proyecto.
+ * Almacena la información del fichero.
  */
 package proyectos;
 import java.io.Serializable;
@@ -14,7 +14,7 @@ import javax.persistence.ManyToOne;
 
 /**
  *
- * @author a_tm1
+ * @author Agustín Tejero Marín
  */
 @Entity
 public class ArchivoAdjunto implements Serializable {

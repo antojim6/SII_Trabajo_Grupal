@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Clase Alumno:
+ * Hereda de Usuario.
+ * Contiene los datos de los estudiantes voluntarios.
  */
 package usuarios;
 
@@ -12,7 +12,7 @@ import javax.persistence.Entity;
 
 /**
  *
- * @author pablojoel
+ * @author Pablo Joel Núñez Campos
  */
 @Entity
 @DiscriminatorValue("ALUMNO")

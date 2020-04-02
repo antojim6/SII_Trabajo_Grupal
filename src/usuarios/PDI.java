@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Clase PDI:
+ * Hereda de Usuario.
+ * Contiene los datos del Personal Docente y de Investigación.
  */
 package usuarios;
 

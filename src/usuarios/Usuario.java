@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Clase Usuario:
+ * Dota a los usuarios específicos de los atributos comunes.
+ * Sigue el tipo de herencia de Tabla Única.
  */
 package usuarios;
 

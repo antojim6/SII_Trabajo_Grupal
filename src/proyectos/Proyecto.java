@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Clase Proyecto:
+ * Representa a los proyectos.
+ * Almacena los datos de interés sobre los mismos.
  */
 package proyectos;
 
@@ -21,7 +21,7 @@ import usuarios.PDI;
 
 /**
  *
- * @author
+ * @author Ignacio Jiménez del Castillo
  */
 @Entity
 public class Proyecto implements Serializable {

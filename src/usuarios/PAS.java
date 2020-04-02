@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Clase PAS:
+ * Hereda de Usuario.
+ * Contiene los datos del Personal de Administración y Servicios.
  */
 package usuarios;
 
@@ -17,7 +17,7 @@ import proyectos.Proyecto;
 
 /**
  *
- * @author mtGómez
+ * @author Miguel Torres Gómez
  */
 @Entity
 @DiscriminatorValue("PAS")
