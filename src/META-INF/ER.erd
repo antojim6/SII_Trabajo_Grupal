@@ -3,15 +3,15 @@
     <datasource>
         <connection value="jdbc:derby://localhost:1527/Trabajo_Grupal"/>
     </datasource>
-    <table tableId="ARCHIVOADJUNTO" x="1278" y="467"/>
-    <table tableId="JND_USUARIO_ACTIVIDAD" x="58" y="546"/>
-    <table tableId="JND_PROYECTO_PAS" x="530" y="63"/>
-    <table tableId="ONG" x="916" y="13"/>
-    <table tableId="JND_PROYECTO_ETIQUETA" x="1272" y="179"/>
-    <table tableId="ACTIVIDAD" x="812" y="533"/>
-    <table tableId="SEQUENCE" x="417" y="681"/>
-    <table tableId="JND_PROYECTO_PDI" x="530" y="351"/>
-    <table tableId="USUARIO" x="85" y="114"/>
-    <table tableId="PROYECTO" x="915" y="291"/>
-    <table tableId="ETIQUETA" x="1286" y="17"/>
+    <table tableId="ARCHIVOADJUNTO" x="1147" y="466"/>
+    <table tableId="JND_USUARIO_ACTIVIDAD" x="88" y="749"/>
+    <table tableId="JND_PROYECTO_PAS" x="473" y="241"/>
+    <table tableId="ONG" x="803" y="108"/>
+    <table tableId="JND_PROYECTO_ETIQUETA" x="1066" y="242"/>
+    <table tableId="ACTIVIDAD" x="700" y="708"/>
+    <table tableId="SEQUENCE" x="488" y="136"/>
+    <table tableId="JND_PROYECTO_PDI" x="478" y="529"/>
+    <table tableId="USUARIO" x="114" y="222"/>
+    <table tableId="PROYECTO" x="803" y="378"/>
+    <table tableId="ETIQUETA" x="1080" y="109"/>
 </erd>

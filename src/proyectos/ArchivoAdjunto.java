@@ -33,7 +33,7 @@ public class ArchivoAdjunto implements Serializable {
     private String comentario;
     
     @ManyToOne 
-    private Proyecto coordinaProyecto;
+    private Proyecto proyecto_ID;
     
     //Lista de getters
     
